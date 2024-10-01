@@ -1,5 +1,6 @@
 ---
 slug: /
+sidebar_position: 0
 ---
 
 # Wettbewerb
@@ -14,3 +15,20 @@ Es gibt ein paar interessante Unterlagen vom Land:
 - [Teilnahmebedinungen und Fristen](./assets/28._Landeswettbewerb_-_Teilnahmebedingungen_und_Fristen.pdf)
 - [Flyer](./assets/UDHZ_FLYER_2023_WEB.pdf)
 - [Leitfaden](./assets/UDHZ_FLYER_2023_WEB.pdf)
+
+Besonders interessant ist der Leitfaden. Hier steht zum Beispiel:
+
+> Ein erfolgreiches und zukunftsfähiges Dorf…
+>
+> - orientieret [sic] sich bei seiner Entwicklung an einer Vision, einer Strategie – einem [Leitbild](./leitbild)
+> - entwickelt Pläne und Konzepte für eine nachhaltige Entwicklung
+> - beachtet bei seinen Vorhaben Demografie, Klimaschutz und Klimafolgenanpassung
+> - zeichnet ein generationsübergreifender Zusammenhalt aus
+> - schafft einen Interessensausgleich und wirkt partnerschaftlich bei Projekten zusammen
+> - entwickelt und erhält Versorgungseinrichtungen und Einkommensgrundlagen
+> - erkundet und stärkt das Dorf als sozialen Ort
+> - beachtet die Ökologie des Dorfes bei der Grüngestaltung (privat & öffentlich)
+> - lebt wertschätzende Kommunikation
+> - entwickelt sein Dorf von innen heraus
+
+Wir dröseln diese Dinge auf den kommenden Seiten auf.
