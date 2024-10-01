@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/public/infima.css" />
     <title>Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div class="container padding-top--lg">
       <h1>Bitte einloggen</h1>
       <p>Bitte logge Dich ein, um die Inhalte zu sehen.</p>
-      <button type="button" class="button button--primary" id="login">
+      <button type="button" class="button button--primary" id="loginWithGithub">
         Login mit GitHub
+      </button>
+      <button type="button" class="button button--primary" id="loginWithGoogle">
+        Login mit Google
       </button>
     </div>
   </body>
@@ -19,24 +22,32 @@
   <script>
     const pb = new PocketBase("https://api.rössing.de");
 
-    const login = () =>
+    const loginWithGithub = () =>
       pb
-        // The collection name is non standard because I have multiple auth collections. Usually it's just "users".
         .collection("users")
         .authWithOAuth2({ provider: "github" })
-        .then(() =>
-          // One could also set the cookie with JS but then it would not be httpOnly. So I chose to set it from the server.
-          fetch("/api/cookie", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ token: pb.authStore.token }),
-          })
-        )
-        // Now the auth cookie is set and the user is logged in. We can reload the page to show the protected content.
-        .then(() => window.location.reload());
+        .then(saveTokenFromAuthStoreAsCookiAndReloadPage);
+
+    const loginWithGoogle = () =>
+      pb
+        .collection("users")
+        .authWithOAuth2({ provider: "google" })
+        .then(saveTokenFromAuthStoreAsCookiAndReloadPage);
 
     document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("login").addEventListener("click", login);
+      document
+        .getElementById("loginWithGoogle")
+        .addEventListener("click", loginWithGoogle);
+      document
+        .getElementById("loginWithGithub")
+        .addEventListener("click", loginWithGithub);
     });
+
+    const saveTokenFromAuthStoreAsCookiAndReloadPage = () =>
+      fetch("/api/cookie", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: pb.authStore.token }),
+      }).then(() => window.location.reload());
   </script>
 </html>
