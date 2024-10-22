@@ -93,7 +93,8 @@ const config: Config = {
     footer: {
       style: "dark",
       links: [],
-      copyright: `Nur für Leute, die beim Wettbewerb "Unser Dorf hat Zukunft" für Rössing mithelfen.`,
+      copyright:
+        `Nur für Leute, die beim Wettbewerb "Unser Dorf hat Zukunft" für Rössing mithelfen.`,
     },
     prism: {
       theme: prismThemes.github,
