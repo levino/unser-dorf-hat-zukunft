@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/levino/unser-dorf-hat-zukunft/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/levino/unser-dorf-hat-zukunft/tree/main/",
         },
         blog: {
           path: "berichte",
@@ -53,7 +53,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/levino/unser-dorf-hat-zukunft/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/levino/unser-dorf-hat-zukunft/tree/main/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -93,7 +93,8 @@ const config: Config = {
     footer: {
       style: "dark",
       links: [],
-      copyright: `Nur für Leute, die beim Wettbewerb "Unser Dorf hat Zukunft" für Rössing mithelfen.`,
+      copyright:
+        `Nur für Leute, die beim Wettbewerb "Unser Dorf hat Zukunft" für Rössing mithelfen.`,
     },
     prism: {
       theme: prismThemes.github,
