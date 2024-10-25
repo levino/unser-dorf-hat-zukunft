@@ -92,7 +92,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Unterlagen',
+          label: 'Bewerbungsunterlagen',
         },
         { to: '/berichte', label: 'Berichte', position: 'left' },
         {

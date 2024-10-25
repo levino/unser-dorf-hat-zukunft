@@ -16,10 +16,10 @@ beschäftigen wir uns mit dem Wettbewerb auf Landesebene.
 
 Es gibt ein paar interessante Unterlagen vom Land:
 
-- [Aufruf](./assets/28._Dorfwettbewerb_-_Aufruf.pdf)
-- [Teilnahmebedinungen und Fristen](./assets/28._Landeswettbewerb_-_Teilnahmebedingungen_und_Fristen.pdf)
-- [Flyer](./assets/UDHZ_FLYER_2023_WEB.pdf)
-- [Leitfaden](./assets/UDHZ_FLYER_2023_WEB.pdf)
+- [Aufruf](/aufruf.pdf)
+- [Teilnahmebedinungen und Fristen](/teilnahmebedingungen.pdf)
+- [Flyer](/flyer.pdf)
+- [Leitfaden](/leitfaden.pdf)
 
 Besonders interessant ist der Leitfaden. Hier steht zum Beispiel:
 
