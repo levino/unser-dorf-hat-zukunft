@@ -1,12 +1,16 @@
+---
+sidebar_position: 7
+---
+
 # Auslage
 
 Dokumente, die nach 3.1.5 der [Teilnahmebedingungen](./teilnahmebedingungen.pdf)
 bei der Ortsbesichtigung auszulegen sind.
 
-## Flächennutzungsplan,
+## Flächennutzungsplan
 
-## Bebauungspläne,
+## Bebauungspläne
 
-## ggf. Dorferneuerungsplan,
+## ggf. Dorferneuerungsplan
 
 ## sonstige Pläne und Bildmaterial zur Entwicklung des Dorfes, - Zeitungsberichte usw.
