@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Prägende Elemente
+# Prägende Elemente ❌
 
 ## Wasserschloss
 

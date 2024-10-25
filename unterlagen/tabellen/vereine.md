@@ -1,5 +1,5 @@
 ---
-sidebar_label: Vereine
+sidebar_label: Vereine ❌
 ---
 
 # Anzahl der Vereine und deren Mitgliederzahl

@@ -1,5 +1,5 @@
 ---
-sidebar_label: Kommunikation
+sidebar_label: Kommunikation ❌
 sidebar_position: 8
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Zusammenarbeit
+title: Zusammenarbeit ❌
 sidebar_position: 4
 ---
 

@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Zukunftsfähigkeit
+# Zukunftsfähigkeit ❌
 
 Welche Merkmale machen die Zukunftsfähigkeit Rössings aus?
 

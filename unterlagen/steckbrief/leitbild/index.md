@@ -2,7 +2,7 @@
 collapsible: false
 ---
 
-# Leitbild
+# Leitbild ❌
 
 Im Leitfaden des Landes heißt es:
 

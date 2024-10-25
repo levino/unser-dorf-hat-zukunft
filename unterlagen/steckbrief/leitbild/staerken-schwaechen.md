@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Stärken und Schwächen
+# Stärken und Schwächen ❌
 
 Hier sammeln wir die Stärken und Schwächen Rössings
 

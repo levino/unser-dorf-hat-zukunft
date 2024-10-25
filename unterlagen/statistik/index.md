@@ -2,7 +2,15 @@
 sidebar_position: 4
 ---
 
-# Statistik
+# Statistik ❌
+
+:::info
+
+3.1.2 der [Teilnahmebedingungen](/teilnahmebedingungen.pdf):
+
+> Statistische Angabe zum Dorf
+
+:::
 
 ## Fläche
 

@@ -1,5 +1,5 @@
 ---
-sidebar_label: Kulturlandschaftselemente
+sidebar_label: Kulturlandschaftselemente ❌
 ---
 
 # Historische Kulturlandschaftselemente

@@ -1,5 +1,5 @@
 ---
-title: Pläne
+title: Pläne ❌
 ---
 
 # Pläne und Konzepte

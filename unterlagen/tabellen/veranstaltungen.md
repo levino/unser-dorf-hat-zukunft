@@ -1,5 +1,5 @@
 ---
-sidebar_label: Veranstaltungen
+sidebar_label: Veranstaltungen ❌
 ---
 
 # Veranstaltungen im Dorf

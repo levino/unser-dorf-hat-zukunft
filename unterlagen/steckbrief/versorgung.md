@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Versorgung
+# Versorgung ❌
 
 Die Versorgung der Bevölkerung ist in Rössing gut gewährleistet.
 
