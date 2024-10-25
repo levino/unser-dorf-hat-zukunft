@@ -22,28 +22,28 @@ attributes on the users. For example one could adjust the middleware like so:
 
 ```typescript
 // middleware.ts
-import PocketBase from "pocketbase";
-import { next, rewrite } from "@vercel/edge";
+import PocketBase from 'pocketbase'
+import { next, rewrite } from '@vercel/edge'
 
 export const config = {
-  matcher: ["/", "/((?!public/|api/).*)"],
-};
+  matcher: ['/', '/((?!public/|api/).*)'],
+}
 
 export default async function authentication(request: Request) {
-  const pb = new PocketBase("https://levinkeller.de");
-  const cookie = request.headers.get("cookie");
-  if (!cookie) return rewrite("/public/login.html");
-  pb.authStore.loadFromCookie(cookie);
+  const pb = new PocketBase('https://levinkeller.de')
+  const cookie = request.headers.get('cookie')
+  if (!cookie) return rewrite('/public/login.html')
+  pb.authStore.loadFromCookie(cookie)
   try {
-    await pb.collection("users").authRefresh();
+    await pb.collection('users').authRefresh()
     if (pb.authStore.model?.member) {
-      return next();
+      return next()
     } else {
       // not_a_member.html shows instructions on how to reach the admin to make the person a member.
-      return rewrite("/public/not_a_member.html");
+      return rewrite('/public/not_a_member.html')
     }
   } catch {
-    return rewrite("/public/login.html");
+    return rewrite('/public/login.html')
   }
 }
 ```

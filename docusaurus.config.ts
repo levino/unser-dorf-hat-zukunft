@@ -52,7 +52,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/levino/unser-dorf-hat-zukunft/tree/main/",
+            'https://github.com/levino/unser-dorf-hat-zukunft/tree/main/',
         },
         blog: {
           path: 'berichte',
@@ -65,7 +65,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/levino/unser-dorf-hat-zukunft/tree/main/",
+            'https://github.com/levino/unser-dorf-hat-zukunft/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
