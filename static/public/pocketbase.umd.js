@@ -3,9 +3,8 @@
     ? (module.exports = t())
     : "function" == typeof define && define.amd
     ? define(t)
-    : ((e =
-        "undefined" != typeof globalThis ? globalThis : e || self).PocketBase =
-        t());
+    : ((e = "undefined" != typeof globalThis ? globalThis : e || self)
+      .PocketBase = t());
 })(this, function () {
   "use strict";
   class ClientResponseError extends Error {
@@ -18,8 +17,8 @@
         (this.originalError = null),
         Object.setPrototypeOf(this, ClientResponseError.prototype),
         null !== e &&
-          "object" == typeof e &&
-          ((this.url = "string" == typeof e.url ? e.url : ""),
+        "object" == typeof e &&
+        ((this.url = "string" == typeof e.url ? e.url : ""),
           (this.status = "number" == typeof e.status ? e.status : 0),
           (this.isAbort = !!e.isAbort),
           (this.originalError = e.originalError),
@@ -29,22 +28,22 @@
             ? (this.response = e.data)
             : (this.response = {})),
         this.originalError ||
-          e instanceof ClientResponseError ||
-          (this.originalError = e),
+        e instanceof ClientResponseError ||
+        (this.originalError = e),
         "undefined" != typeof DOMException &&
-          e instanceof DOMException &&
-          (this.isAbort = !0),
+        e instanceof DOMException &&
+        (this.isAbort = !0),
         (this.name = "ClientResponseError " + this.status),
         (this.message = this.response?.message),
         this.message ||
-          (this.isAbort
-            ? (this.message =
-                "The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.")
-            : this.originalError?.cause?.message?.includes("ECONNREFUSED ::1")
-            ? (this.message =
-                "Failed to connect to the PocketBase server. Try changing the SDK URL from localhost to 127.0.0.1 (https://github.com/pocketbase/js-sdk/issues/21).")
-            : (this.message =
-                "Something went wrong while processing your request."));
+        (this.isAbort
+          ? (this.message =
+            "The request was autocancelled. You can find more info in https://github.com/pocketbase/js-sdk#auto-cancellation.")
+          : this.originalError?.cause?.message?.includes("ECONNREFUSED ::1")
+          ? (this.message =
+            "Failed to connect to the PocketBase server. Try changing the SDK URL from localhost to 127.0.0.1 (https://github.com/pocketbase/js-sdk/issues/21).")
+          : (this.message =
+            "Something went wrong while processing your request."));
     }
     get data() {
       return this.response;
@@ -63,8 +62,9 @@
     let a = t + "=" + r;
     if (null != n.maxAge) {
       const e = n.maxAge - 0;
-      if (isNaN(e) || !isFinite(e))
+      if (isNaN(e) || !isFinite(e)) {
         throw new TypeError("option maxAge is invalid");
+      }
       a += "; Max-Age=" + Math.floor(e);
     }
     if (n.domain) {
@@ -84,14 +84,15 @@
           );
         })(n.expires) ||
         isNaN(n.expires.valueOf())
-      )
+      ) {
         throw new TypeError("option expires is invalid");
+      }
       a += "; Expires=" + n.expires.toUTCString();
     }
     if (
       (n.httpOnly && (a += "; HttpOnly"),
-      n.secure && (a += "; Secure"),
-      n.priority)
+        n.secure && (a += "; Secure"),
+        n.priority)
     ) {
       switch (
         "string" == typeof n.priority ? n.priority.toLowerCase() : n.priority
@@ -142,7 +143,7 @@
     ("undefined" != typeof global && global.HermesInternal);
   let s;
   function getTokenPayload(e) {
-    if (e)
+    if (e) {
       try {
         const t = decodeURIComponent(
           s(e.split(".")[1])
@@ -150,10 +151,11 @@
             .map(function (e) {
               return "%" + ("00" + e.charCodeAt(0).toString(16)).slice(-2);
             })
-            .join("")
+            .join(""),
         );
         return JSON.parse(t) || {};
       } catch (e) {}
+    }
     return {};
   }
   function isTokenExpired(e, t = 0) {
@@ -163,28 +165,29 @@
       (!s.exp || s.exp - t > Date.now() / 1e3)
     );
   }
-  s =
-    "function" != typeof atob || t
-      ? (e) => {
-          let t = String(e).replace(/=+$/, "");
-          if (t.length % 4 == 1)
-            throw new Error(
-              "'atob' failed: The string to be decoded is not correctly encoded."
-            );
-          for (
-            var s, i, n = 0, o = 0, r = "";
-            (i = t.charAt(o++));
-            ~i && ((s = n % 4 ? 64 * s + i : i), n++ % 4)
-              ? (r += String.fromCharCode(255 & (s >> ((-2 * n) & 6))))
-              : 0
-          )
-            i =
-              "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".indexOf(
-                i
-              );
-          return r;
-        }
-      : atob;
+  s = "function" != typeof atob || t
+    ? (e) => {
+      let t = String(e).replace(/=+$/, "");
+      if (t.length % 4 == 1) {
+        throw new Error(
+          "'atob' failed: The string to be decoded is not correctly encoded.",
+        );
+      }
+      for (
+        var s, i, n = 0, o = 0, r = "";
+        (i = t.charAt(o++));
+        ~i && ((s = n % 4 ? 64 * s + i : i), n++ % 4)
+          ? (r += String.fromCharCode(255 & (s >> ((-2 * n) & 6))))
+          : 0
+      ) {
+        i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+          .indexOf(
+            i,
+          );
+      }
+      return r;
+    }
+    : atob;
   const i = "pb_auth";
   class BaseAuthStore {
     constructor() {
@@ -216,40 +219,39 @@
       (this.baseToken = ""), (this.baseModel = null), this.triggerChange();
     }
     loadFromCookie(e, t = i) {
-      const s =
-        (function cookieParse(e, t) {
-          const s = {};
-          if ("string" != typeof e) return s;
-          const i = Object.assign({}, t || {}).decode || defaultDecode;
-          let n = 0;
-          for (; n < e.length; ) {
-            const t = e.indexOf("=", n);
-            if (-1 === t) break;
-            let o = e.indexOf(";", n);
-            if (-1 === o) o = e.length;
-            else if (o < t) {
-              n = e.lastIndexOf(";", t - 1) + 1;
-              continue;
-            }
-            const r = e.slice(n, t).trim();
-            if (void 0 === s[r]) {
-              let n = e.slice(t + 1, o).trim();
-              34 === n.charCodeAt(0) && (n = n.slice(1, -1));
-              try {
-                s[r] = i(n);
-              } catch (e) {
-                s[r] = n;
-              }
-            }
-            n = o + 1;
+      const s = (function cookieParse(e, t) {
+        const s = {};
+        if ("string" != typeof e) return s;
+        const i = Object.assign({}, t || {}).decode || defaultDecode;
+        let n = 0;
+        for (; n < e.length;) {
+          const t = e.indexOf("=", n);
+          if (-1 === t) break;
+          let o = e.indexOf(";", n);
+          if (-1 === o) o = e.length;
+          else if (o < t) {
+            n = e.lastIndexOf(";", t - 1) + 1;
+            continue;
           }
-          return s;
-        })(e || "")[t] || "";
+          const r = e.slice(n, t).trim();
+          if (void 0 === s[r]) {
+            let n = e.slice(t + 1, o).trim();
+            34 === n.charCodeAt(0) && (n = n.slice(1, -1));
+            try {
+              s[r] = i(n);
+            } catch (e) {
+              s[r] = n;
+            }
+          }
+          n = o + 1;
+        }
+        return s;
+      })(e || "")[t] || "";
       let n = {};
       try {
         (n = JSON.parse(s)),
           (null === typeof n || "object" != typeof n || Array.isArray(n)) &&
-            (n = {});
+          (n = {});
       } catch (e) {}
       this.save(n.token || "", n.model || null);
     }
@@ -267,23 +269,24 @@
       if (o.model && a > 4096) {
         o.model = { id: o?.model?.id, email: o?.model?.email };
         const s = ["collectionId", "username", "verified"];
-        for (const e in this.model)
+        for (const e in this.model) {
           s.includes(e) && (o.model[e] = this.model[e]);
+        }
         r = cookieSerialize(t, JSON.stringify(o), e);
       }
       return r;
     }
     onChange(e, t = !1) {
       return (
-        this._onChangeCallbacks.push(e),
-        t && e(this.token, this.model),
-        () => {
-          for (let t = this._onChangeCallbacks.length - 1; t >= 0; t--)
-            if (this._onChangeCallbacks[t] == e)
+        this._onChangeCallbacks.push(e), t && e(this.token, this.model), () => {
+          for (let t = this._onChangeCallbacks.length - 1; t >= 0; t--) {
+            if (this._onChangeCallbacks[t] == e) {
               return (
                 delete this._onChangeCallbacks[t],
-                void this._onChangeCallbacks.splice(t, 1)
+                  void this._onChangeCallbacks.splice(t, 1)
               );
+            }
+          }
         }
       );
     }
@@ -331,9 +334,8 @@
     }
     _storageRemove(e) {
       "undefined" != typeof window &&
-        window?.localStorage &&
-        window.localStorage?.removeItem(e),
-        delete this.storageFallback[e];
+      window?.localStorage &&
+      window.localStorage?.removeItem(e), delete this.storageFallback[e];
     }
     _bindStorageEvent() {
       "undefined" != typeof window &&
@@ -355,28 +357,27 @@
     async getAll(e) {
       return (
         (e = Object.assign({ method: "GET" }, e)),
-        this.client.send("/api/settings", e)
+          this.client.send("/api/settings", e)
       );
     }
     async update(e, t) {
       return (
         (t = Object.assign({ method: "PATCH", body: e }, t)),
-        this.client.send("/api/settings", t)
+          this.client.send("/api/settings", t)
       );
     }
     async testS3(e = "storage", t) {
       return (
         (t = Object.assign({ method: "POST", body: { filesystem: e } }, t)),
-        this.client.send("/api/settings/test/s3", t).then(() => !0)
+          this.client.send("/api/settings/test/s3", t).then(() => !0)
       );
     }
     async testEmail(e, t, s) {
       return (
         (s = Object.assign(
           { method: "POST", body: { email: e, template: t } },
-          s
-        )),
-        this.client.send("/api/settings/test/email", s).then(() => !0)
+          s,
+        )), this.client.send("/api/settings/test/email", s).then(() => !0)
       );
     }
     async generateAppleClientSecret(e, t, s, i, n, o) {
@@ -392,9 +393,8 @@
               duration: n,
             },
           },
-          o
-        )),
-        this.client.send("/api/settings/apple/generate-client-secret", o)
+          o,
+        )), this.client.send("/api/settings/apple/generate-client-secret", o)
       );
     }
   }
@@ -407,44 +407,45 @@
       let s = 500;
       return (
         (t = Object.assign({}, e, t)).batch && ((s = t.batch), delete t.batch),
-        this._getFullList(s, t)
+          this._getFullList(s, t)
       );
     }
     async getList(e = 1, t = 30, s) {
       return (
         ((s = Object.assign({ method: "GET" }, s)).query = Object.assign(
           { page: e, perPage: t },
-          s.query
+          s.query,
         )),
-        this.client
-          .send(this.baseCrudPath, s)
-          .then(
-            (e) => ((e.items = e.items?.map((e) => this.decode(e)) || []), e)
-          )
+          this.client
+            .send(this.baseCrudPath, s)
+            .then(
+              (e) => ((e.items = e.items?.map((e) => this.decode(e)) || []), e),
+            )
       );
     }
     async getFirstListItem(e, t) {
       return (
         ((t = Object.assign(
           { requestKey: "one_by_filter_" + this.baseCrudPath + "_" + e },
-          t
+          t,
         )).query = Object.assign({ filter: e, skipTotal: 1 }, t.query)),
-        this.getList(1, 1, t).then((e) => {
-          if (!e?.items?.length)
-            throw new ClientResponseError({
-              status: 404,
-              response: {
-                code: 404,
-                message: "The requested resource wasn't found.",
-                data: {},
-              },
-            });
-          return e.items[0];
-        })
+          this.getList(1, 1, t).then((e) => {
+            if (!e?.items?.length) {
+              throw new ClientResponseError({
+                status: 404,
+                response: {
+                  code: 404,
+                  message: "The requested resource wasn't found.",
+                  data: {},
+                },
+              });
+            }
+            return e.items[0];
+          })
       );
     }
     async getOne(e, t) {
-      if (!e)
+      if (!e) {
         throw new ClientResponseError({
           url: this.client.buildUrl(this.baseCrudPath + "/"),
           status: 404,
@@ -454,33 +455,34 @@
             data: {},
           },
         });
+      }
       return (
         (t = Object.assign({ method: "GET" }, t)),
-        this.client
-          .send(this.baseCrudPath + "/" + encodeURIComponent(e), t)
-          .then((e) => this.decode(e))
+          this.client
+            .send(this.baseCrudPath + "/" + encodeURIComponent(e), t)
+            .then((e) => this.decode(e))
       );
     }
     async create(e, t) {
       return (
         (t = Object.assign({ method: "POST", body: e }, t)),
-        this.client.send(this.baseCrudPath, t).then((e) => this.decode(e))
+          this.client.send(this.baseCrudPath, t).then((e) => this.decode(e))
       );
     }
     async update(e, t, s) {
       return (
         (s = Object.assign({ method: "PATCH", body: t }, s)),
-        this.client
-          .send(this.baseCrudPath + "/" + encodeURIComponent(e), s)
-          .then((e) => this.decode(e))
+          this.client
+            .send(this.baseCrudPath + "/" + encodeURIComponent(e), s)
+            .then((e) => this.decode(e))
       );
     }
     async delete(e, t) {
       return (
         (t = Object.assign({ method: "DELETE" }, t)),
-        this.client
-          .send(this.baseCrudPath + "/" + encodeURIComponent(e), t)
-          .then(() => !0)
+          this.client
+            .send(this.baseCrudPath + "/" + encodeURIComponent(e), t)
+            .then(() => !0)
       );
     }
     _getFullList(e = 500, t) {
@@ -520,10 +522,9 @@
         .then(
           (e) => (
             this.client.authStore.model?.id === e.id &&
-              void 0 === this.client.authStore.model?.collectionId &&
-              this.client.authStore.save(this.client.authStore.token, e),
-            e
-          )
+            void 0 === this.client.authStore.model?.collectionId &&
+            this.client.authStore.save(this.client.authStore.token, e), e
+          ),
         );
     }
     async delete(e, t) {
@@ -532,18 +533,17 @@
         .then(
           (t) => (
             t &&
-              this.client.authStore.model?.id === e &&
-              void 0 === this.client.authStore.model?.collectionId &&
-              this.client.authStore.clear(),
-            t
-          )
+            this.client.authStore.model?.id === e &&
+            void 0 === this.client.authStore.model?.collectionId &&
+            this.client.authStore.clear(), t
+          ),
         );
     }
     authResponse(e) {
       const t = this.decode(e?.admin || {});
       return (
         e?.token && e?.admin && this.client.authStore.save(e.token, t),
-        Object.assign({}, e, { token: e?.token || "", admin: t })
+          Object.assign({}, e, { token: e?.token || "", admin: t })
       );
     }
     async authWithPassword(e, t, s, i) {
@@ -552,18 +552,18 @@
         "This form of authWithPassword(email, pass, body?, query?) is deprecated. Consider replacing it with authWithPassword(email, pass, options?).",
         n,
         s,
-        i
+        i,
       );
       const o = n.autoRefreshThreshold;
       delete n.autoRefreshThreshold,
         n.autoRefresh || resetAutoRefresh(this.client);
       let r = await this.client.send(
         this.baseCrudPath + "/auth-with-password",
-        n
+        n,
       );
       return (
         (r = this.authResponse(r)),
-        o &&
+          o &&
           (function registerAutoRefresh(e, t, s, i) {
             resetAutoRefresh(e);
             const n = e.beforeSend,
@@ -580,18 +580,20 @@
             }),
               (e.beforeSend = async (o, r) => {
                 const a = e.authStore.token;
-                if (r.query?.autoRefresh)
+                if (r.query?.autoRefresh) {
                   return n ? n(o, r) : { url: o, sendOptions: r };
+                }
                 let c = e.authStore.isValid;
-                if (c && isTokenExpired(e.authStore.token, t))
+                if (c && isTokenExpired(e.authStore.token, t)) {
                   try {
                     await s();
                   } catch (e) {
                     c = !1;
                   }
+                }
                 c || (await i());
                 const l = r.headers || {};
-                for (let t in l)
+                for (let t in l) {
                   if (
                     "authorization" == t.toLowerCase() &&
                     a == l[t] &&
@@ -600,6 +602,7 @@
                     l[t] = e.authStore.token;
                     break;
                   }
+                }
                 return (
                   (r.headers = l), n ? n(o, r) : { url: o, sendOptions: r }
                 );
@@ -609,9 +612,13 @@
             o,
             () => this.authRefresh({ autoRefresh: !0 }),
             () =>
-              this.authWithPassword(e, t, Object.assign({ autoRefresh: !0 }, n))
+              this.authWithPassword(
+                e,
+                t,
+                Object.assign({ autoRefresh: !0 }, n),
+              ),
           ),
-        r
+          r
       );
     }
     async authRefresh(e, t) {
@@ -621,11 +628,11 @@
           "This form of authRefresh(body?, query?) is deprecated. Consider replacing it with authRefresh(options?).",
           s,
           e,
-          t
+          t,
         )),
-        this.client
-          .send(this.baseCrudPath + "/auth-refresh", s)
-          .then(this.authResponse.bind(this))
+          this.client
+            .send(this.baseCrudPath + "/auth-refresh", s)
+            .then(this.authResponse.bind(this))
       );
     }
     async requestPasswordReset(e, t, s) {
@@ -635,11 +642,11 @@
           "This form of requestPasswordReset(email, body?, query?) is deprecated. Consider replacing it with requestPasswordReset(email, options?).",
           i,
           t,
-          s
+          s,
         )),
-        this.client
-          .send(this.baseCrudPath + "/request-password-reset", i)
-          .then(() => !0)
+          this.client
+            .send(this.baseCrudPath + "/request-password-reset", i)
+            .then(() => !0)
       );
     }
     async confirmPasswordReset(e, t, s, i, n) {
@@ -652,11 +659,11 @@
           "This form of confirmPasswordReset(resetToken, password, passwordConfirm, body?, query?) is deprecated. Consider replacing it with confirmPasswordReset(resetToken, password, passwordConfirm, options?).",
           o,
           i,
-          n
+          n,
         )),
-        this.client
-          .send(this.baseCrudPath + "/confirm-password-reset", o)
-          .then(() => !0)
+          this.client
+            .send(this.baseCrudPath + "/confirm-password-reset", o)
+            .then(() => !0)
       );
     }
   }
@@ -699,7 +706,13 @@
         (this.reconnectAttempts = 0),
         (this.maxReconnectAttempts = 1 / 0),
         (this.predefinedReconnectIntervals = [
-          200, 300, 500, 1e3, 1200, 1500, 2e3,
+          200,
+          300,
+          500,
+          1e3,
+          1200,
+          1500,
+          2e3,
         ]),
         (this.pendingConnects = []);
     }
@@ -712,11 +725,10 @@
       if (!e) throw new Error("topic must be set.");
       let i = e;
       if (s) {
-        normalizeUnknownQueryParams((s = Object.assign({}, s)));
-        const e =
-          "options=" +
+        normalizeUnknownQueryParams(s = Object.assign({}, s));
+        const e = "options=" +
           encodeURIComponent(
-            JSON.stringify({ query: s.query, headers: s.headers })
+            JSON.stringify({ query: s.query, headers: s.headers }),
           );
         i += (i.includes("?") ? "&" : "?") + e;
       }
@@ -730,25 +742,27 @@
       };
       return (
         this.subscriptions[i] || (this.subscriptions[i] = []),
-        this.subscriptions[i].push(listener),
-        this.isConnected
-          ? 1 === this.subscriptions[i].length
-            ? await this.submitSubscriptions()
-            : this.eventSource?.addEventListener(i, listener)
-          : await this.connect(),
-        async () => this.unsubscribeByTopicAndListener(e, listener)
+          this.subscriptions[i].push(listener),
+          this.isConnected
+            ? 1 === this.subscriptions[i].length
+              ? await this.submitSubscriptions()
+              : this.eventSource?.addEventListener(i, listener)
+            : await this.connect(),
+          async () => this.unsubscribeByTopicAndListener(e, listener)
       );
     }
     async unsubscribe(e) {
       let t = !1;
       if (e) {
         const s = this.getSubscriptionsByTopic(e);
-        for (let e in s)
+        for (let e in s) {
           if (this.hasSubscriptionListeners(e)) {
-            for (let t of this.subscriptions[e])
+            for (let t of this.subscriptions[e]) {
               this.eventSource?.removeEventListener(e, t);
+            }
             delete this.subscriptions[e], t || (t = !0);
           }
+        }
       } else this.subscriptions = {};
       this.hasSubscriptionListeners()
         ? t && (await this.submitSubscriptions())
@@ -756,13 +770,15 @@
     }
     async unsubscribeByPrefix(e) {
       let t = !1;
-      for (let s in this.subscriptions)
+      for (let s in this.subscriptions) {
         if ((s + "?").startsWith(e)) {
           t = !0;
-          for (let e of this.subscriptions[s])
+          for (let e of this.subscriptions[s]) {
             this.eventSource?.removeEventListener(s, e);
+          }
           delete this.subscriptions[s];
         }
+      }
       t &&
         (this.hasSubscriptionListeners()
           ? await this.submitSubscriptions()
@@ -775,48 +791,53 @@
         if (
           !Array.isArray(this.subscriptions[e]) ||
           !this.subscriptions[e].length
-        )
+        ) {
           continue;
+        }
         let i = !1;
-        for (let s = this.subscriptions[e].length - 1; s >= 0; s--)
+        for (let s = this.subscriptions[e].length - 1; s >= 0; s--) {
           this.subscriptions[e][s] === t &&
             ((i = !0),
-            delete this.subscriptions[e][s],
-            this.subscriptions[e].splice(s, 1),
-            this.eventSource?.removeEventListener(e, t));
+              delete this.subscriptions[e][s],
+              this.subscriptions[e].splice(s, 1),
+              this.eventSource?.removeEventListener(e, t));
+        }
         i &&
           (this.subscriptions[e].length || delete this.subscriptions[e],
-          s || this.hasSubscriptionListeners(e) || (s = !0));
+            s || this.hasSubscriptionListeners(e) || (s = !0));
       }
       this.hasSubscriptionListeners()
         ? s && (await this.submitSubscriptions())
         : this.disconnect();
     }
     hasSubscriptionListeners(e) {
-      if (((this.subscriptions = this.subscriptions || {}), e))
+      if (((this.subscriptions = this.subscriptions || {}), e)) {
         return !!this.subscriptions[e]?.length;
-      for (let e in this.subscriptions)
+      }
+      for (let e in this.subscriptions) {
         if (this.subscriptions[e]?.length) return !0;
+      }
       return !1;
     }
     async submitSubscriptions() {
-      if (this.clientId)
+      if (this.clientId) {
         return (
           this.addAllSubscriptionListeners(),
-          (this.lastSentSubscriptions = this.getNonEmptySubscriptionKeys()),
-          this.client
-            .send("/api/realtime", {
-              method: "POST",
-              body: {
-                clientId: this.clientId,
-                subscriptions: this.lastSentSubscriptions,
-              },
-              requestKey: this.getSubscriptionsCancelKey(),
-            })
-            .catch((e) => {
-              if (!e?.isAbort) throw e;
-            })
+            (this.lastSentSubscriptions = this.getNonEmptySubscriptionKeys()),
+            this.client
+              .send("/api/realtime", {
+                method: "POST",
+                body: {
+                  clientId: this.clientId,
+                  subscriptions: this.lastSentSubscriptions,
+                },
+                requestKey: this.getSubscriptionsCancelKey(),
+              })
+              .catch((e) => {
+                if (!e?.isAbort) throw e;
+              })
         );
+      }
     }
     getSubscriptionsCancelKey() {
       return "realtime_" + this.clientId;
@@ -824,51 +845,59 @@
     getSubscriptionsByTopic(e) {
       const t = {};
       e = e.includes("?") ? e : e + "?";
-      for (let s in this.subscriptions)
+      for (let s in this.subscriptions) {
         (s + "?").startsWith(e) && (t[s] = this.subscriptions[s]);
+      }
       return t;
     }
     getNonEmptySubscriptionKeys() {
       const e = [];
-      for (let t in this.subscriptions)
+      for (let t in this.subscriptions) {
         this.subscriptions[t].length && e.push(t);
+      }
       return e;
     }
     addAllSubscriptionListeners() {
       if (this.eventSource) {
         this.removeAllSubscriptionListeners();
-        for (let e in this.subscriptions)
-          for (let t of this.subscriptions[e])
+        for (let e in this.subscriptions) {
+          for (let t of this.subscriptions[e]) {
             this.eventSource.addEventListener(e, t);
+          }
+        }
       }
     }
     removeAllSubscriptionListeners() {
-      if (this.eventSource)
-        for (let e in this.subscriptions)
-          for (let t of this.subscriptions[e])
+      if (this.eventSource) {
+        for (let e in this.subscriptions) {
+          for (let t of this.subscriptions[e]) {
             this.eventSource.removeEventListener(e, t);
+          }
+        }
+      }
     }
     async connect() {
-      if (!(this.reconnectAttempts > 0))
+      if (!(this.reconnectAttempts > 0)) {
         return new Promise((e, t) => {
           this.pendingConnects.push({ resolve: e, reject: t }),
             this.pendingConnects.length > 1 || this.initConnect();
         });
+      }
     }
     initConnect() {
       this.disconnect(!0),
         clearTimeout(this.connectTimeoutId),
         (this.connectTimeoutId = setTimeout(() => {
           this.connectErrorHandler(
-            new Error("EventSource connect took too long.")
+            new Error("EventSource connect took too long."),
           );
         }, this.maxConnectTimeout)),
         (this.eventSource = new EventSource(
-          this.client.buildUrl("/api/realtime")
+          this.client.buildUrl("/api/realtime"),
         )),
         (this.eventSource.onerror = (e) => {
           this.connectErrorHandler(
-            new Error("Failed to establish realtime connection.")
+            new Error("Failed to establish realtime connection."),
           );
         }),
         this.eventSource.addEventListener("PB_CONNECT", (e) => {
@@ -877,8 +906,9 @@
             this.submitSubscriptions()
               .then(async () => {
                 let e = 3;
-                for (; this.hasUnsentSubscriptions() && e > 0; )
+                for (; this.hasUnsentSubscriptions() && e > 0;) {
                   e--, await this.submitSubscriptions();
+                }
               })
               .then(() => {
                 for (let e of this.pendingConnects) e.resolve();
@@ -903,17 +933,17 @@
     connectErrorHandler(e) {
       if (
         (clearTimeout(this.connectTimeoutId),
-        clearTimeout(this.reconnectTimeoutId),
-        (!this.clientId && !this.reconnectAttempts) ||
+          clearTimeout(this.reconnectTimeoutId),
+          (!this.clientId && !this.reconnectAttempts) ||
           this.reconnectAttempts > this.maxReconnectAttempts)
       ) {
-        for (let t of this.pendingConnects)
+        for (let t of this.pendingConnects) {
           t.reject(new ClientResponseError(e));
+        }
         return (this.pendingConnects = []), void this.disconnect();
       }
       this.disconnect(!0);
-      const t =
-        this.predefinedReconnectIntervals[this.reconnectAttempts] ||
+      const t = this.predefinedReconnectIntervals[this.reconnectAttempts] ||
         this.predefinedReconnectIntervals[
           this.predefinedReconnectIntervals.length - 1
         ];
@@ -925,13 +955,13 @@
     disconnect(e = !1) {
       if (
         (clearTimeout(this.connectTimeoutId),
-        clearTimeout(this.reconnectTimeoutId),
-        this.removeAllSubscriptionListeners(),
-        this.client.cancelRequest(this.getSubscriptionsCancelKey()),
-        this.eventSource?.close(),
-        (this.eventSource = null),
-        (this.clientId = ""),
-        !e)
+          clearTimeout(this.reconnectTimeoutId),
+          this.removeAllSubscriptionListeners(),
+          this.client.cancelRequest(this.getSubscriptionsCancelKey()),
+          this.eventSource?.close(),
+          (this.eventSource = null),
+          (this.clientId = ""),
+          !e)
       ) {
         this.reconnectAttempts = 0;
         for (let e of this.pendingConnects) e.resolve();
@@ -955,7 +985,7 @@
       return this.client.realtime.subscribe(
         this.collectionIdOrName + "/" + e,
         t,
-        s
+        s,
       );
     }
     async unsubscribe(e) {
@@ -986,13 +1016,12 @@
         .then(
           (e) => (
             this.client.authStore.model?.id !== e?.id ||
-              (this.client.authStore.model?.collectionId !==
+            (this.client.authStore.model?.collectionId !==
                 this.collectionIdOrName &&
-                this.client.authStore.model?.collectionName !==
-                  this.collectionIdOrName) ||
-              this.client.authStore.save(this.client.authStore.token, e),
-            e
-          )
+              this.client.authStore.model?.collectionName !==
+                this.collectionIdOrName) ||
+            this.client.authStore.save(this.client.authStore.token, e), e
+          ),
         );
     }
     async delete(e, t) {
@@ -1001,37 +1030,36 @@
         .then(
           (t) => (
             !t ||
-              this.client.authStore.model?.id !== e ||
-              (this.client.authStore.model?.collectionId !==
+            this.client.authStore.model?.id !== e ||
+            (this.client.authStore.model?.collectionId !==
                 this.collectionIdOrName &&
-                this.client.authStore.model?.collectionName !==
-                  this.collectionIdOrName) ||
-              this.client.authStore.clear(),
-            t
-          )
+              this.client.authStore.model?.collectionName !==
+                this.collectionIdOrName) ||
+            this.client.authStore.clear(), t
+          ),
         );
     }
     authResponse(e) {
       const t = this.decode(e?.record || {});
       return (
         this.client.authStore.save(e?.token, t),
-        Object.assign({}, e, { token: e?.token || "", record: t })
+          Object.assign({}, e, { token: e?.token || "", record: t })
       );
     }
     async listAuthMethods(e) {
       return (
         (e = Object.assign({ method: "GET" }, e)),
-        this.client
-          .send(this.baseCollectionPath + "/auth-methods", e)
-          .then((e) =>
-            Object.assign({}, e, {
-              usernamePassword: !!e?.usernamePassword,
-              emailPassword: !!e?.emailPassword,
-              authProviders: Array.isArray(e?.authProviders)
-                ? e?.authProviders
-                : [],
-            })
-          )
+          this.client
+            .send(this.baseCollectionPath + "/auth-methods", e)
+            .then((e) =>
+              Object.assign({}, e, {
+                usernamePassword: !!e?.usernamePassword,
+                emailPassword: !!e?.emailPassword,
+                authProviders: Array.isArray(e?.authProviders)
+                  ? e?.authProviders
+                  : [],
+              })
+            )
       );
     }
     async authWithPassword(e, t, s, i) {
@@ -1041,11 +1069,11 @@
           "This form of authWithPassword(usernameOrEmail, pass, body?, query?) is deprecated. Consider replacing it with authWithPassword(usernameOrEmail, pass, options?).",
           n,
           s,
-          i
+          i,
         )),
-        this.client
-          .send(this.baseCollectionPath + "/auth-with-password", n)
-          .then((e) => this.authResponse(e))
+          this.client
+            .send(this.baseCollectionPath + "/auth-with-password", n)
+            .then((e) => this.authResponse(e))
       );
     }
     async authWithOAuth2Code(e, t, s, i, n, o, r) {
@@ -1064,29 +1092,30 @@
           "This form of authWithOAuth2Code(provider, code, codeVerifier, redirectUrl, createData?, body?, query?) is deprecated. Consider replacing it with authWithOAuth2Code(provider, code, codeVerifier, redirectUrl, createData?, options?).",
           a,
           o,
-          r
+          r,
         )),
-        this.client
-          .send(this.baseCollectionPath + "/auth-with-oauth2", a)
-          .then((e) => this.authResponse(e))
+          this.client
+            .send(this.baseCollectionPath + "/auth-with-oauth2", a)
+            .then((e) => this.authResponse(e))
       );
     }
     authWithOAuth2(...e) {
-      if (e.length > 1 || "string" == typeof e?.[0])
+      if (e.length > 1 || "string" == typeof e?.[0]) {
         return (
           console.warn(
-            "PocketBase: This form of authWithOAuth2() is deprecated and may get removed in the future. Please replace with authWithOAuth2Code() OR use the authWithOAuth2() realtime form as shown in https://pocketbase.io/docs/authentication/#oauth2-integration."
+            "PocketBase: This form of authWithOAuth2() is deprecated and may get removed in the future. Please replace with authWithOAuth2Code() OR use the authWithOAuth2() realtime form as shown in https://pocketbase.io/docs/authentication/#oauth2-integration.",
           ),
-          this.authWithOAuth2Code(
-            e?.[0] || "",
-            e?.[1] || "",
-            e?.[2] || "",
-            e?.[3] || "",
-            e?.[4] || {},
-            e?.[5] || {},
-            e?.[6] || {}
-          )
+            this.authWithOAuth2Code(
+              e?.[0] || "",
+              e?.[1] || "",
+              e?.[2] || "",
+              e?.[3] || "",
+              e?.[4] || {},
+              e?.[5] || {},
+              e?.[6] || {},
+            )
         );
+      }
       const t = e?.[0] || {};
       let s = null;
       t.urlCallback || (s = openBrowserPopup(void 0));
@@ -1098,69 +1127,72 @@
         o = t.requestKey;
       return (
         o && (n.requestKey = o),
-        this.listAuthMethods(n)
-          .then((e) => {
-            const n = e.authProviders.find((e) => e.name === t.provider);
-            if (!n)
-              throw new ClientResponseError(
-                new Error(`Missing or invalid provider "${t.provider}".`)
-              );
-            const r = this.client.buildUrl("/api/oauth2-redirect"),
-              a = o ? this.client.cancelControllers?.[o] : void 0;
-            return (
-              a &&
+          this.listAuthMethods(n)
+            .then((e) => {
+              const n = e.authProviders.find((e) => e.name === t.provider);
+              if (!n) {
+                throw new ClientResponseError(
+                  new Error(`Missing or invalid provider "${t.provider}".`),
+                );
+              }
+              const r = this.client.buildUrl("/api/oauth2-redirect"),
+                a = o ? this.client.cancelControllers?.[o] : void 0;
+              return (
+                a &&
                 (a.signal.onabort = () => {
                   cleanup();
                 }),
-              new Promise(async (e, o) => {
-                try {
-                  await i.subscribe("@oauth2", async (s) => {
-                    const c = i.clientId;
+                  new Promise(async (e, o) => {
                     try {
-                      if (!s.state || c !== s.state)
-                        throw new Error("State parameters don't match.");
-                      if (s.error || !s.code)
-                        throw new Error(
-                          "OAuth2 redirect error or missing code: " + s.error
-                        );
-                      const i = Object.assign({}, t);
-                      delete i.provider,
-                        delete i.scopes,
-                        delete i.createData,
-                        delete i.urlCallback,
-                        a?.signal?.onabort && (a.signal.onabort = null);
-                      const o = await this.authWithOAuth2Code(
-                        n.name,
-                        s.code,
-                        n.codeVerifier,
-                        r,
-                        t.createData,
-                        i
-                      );
-                      e(o);
+                      await i.subscribe("@oauth2", async (s) => {
+                        const c = i.clientId;
+                        try {
+                          if (!s.state || c !== s.state) {
+                            throw new Error("State parameters don't match.");
+                          }
+                          if (s.error || !s.code) {
+                            throw new Error(
+                              "OAuth2 redirect error or missing code: " +
+                                s.error,
+                            );
+                          }
+                          const i = Object.assign({}, t);
+                          delete i.provider,
+                            delete i.scopes,
+                            delete i.createData,
+                            delete i.urlCallback,
+                            a?.signal?.onabort && (a.signal.onabort = null);
+                          const o = await this.authWithOAuth2Code(
+                            n.name,
+                            s.code,
+                            n.codeVerifier,
+                            r,
+                            t.createData,
+                            i,
+                          );
+                          e(o);
+                        } catch (e) {
+                          o(new ClientResponseError(e));
+                        }
+                        cleanup();
+                      });
+                      const c = { state: i.clientId };
+                      t.scopes?.length && (c.scope = t.scopes.join(" "));
+                      const l = this._replaceQueryParams(n.authUrl + r, c);
+                      let h = t.urlCallback ||
+                        function (e) {
+                          s ? (s.location.href = e) : (s = openBrowserPopup(e));
+                        };
+                      await h(l);
                     } catch (e) {
-                      o(new ClientResponseError(e));
+                      cleanup(), o(new ClientResponseError(e));
                     }
-                    cleanup();
-                  });
-                  const c = { state: i.clientId };
-                  t.scopes?.length && (c.scope = t.scopes.join(" "));
-                  const l = this._replaceQueryParams(n.authUrl + r, c);
-                  let h =
-                    t.urlCallback ||
-                    function (e) {
-                      s ? (s.location.href = e) : (s = openBrowserPopup(e));
-                    };
-                  await h(l);
-                } catch (e) {
-                  cleanup(), o(new ClientResponseError(e));
-                }
-              })
-            );
-          })
-          .catch((e) => {
-            throw (cleanup(), e);
-          })
+                  })
+              );
+            })
+            .catch((e) => {
+              throw (cleanup(), e);
+            })
       );
     }
     async authRefresh(e, t) {
@@ -1170,11 +1202,11 @@
           "This form of authRefresh(body?, query?) is deprecated. Consider replacing it with authRefresh(options?).",
           s,
           e,
-          t
+          t,
         )),
-        this.client
-          .send(this.baseCollectionPath + "/auth-refresh", s)
-          .then((e) => this.authResponse(e))
+          this.client
+            .send(this.baseCollectionPath + "/auth-refresh", s)
+            .then((e) => this.authResponse(e))
       );
     }
     async requestPasswordReset(e, t, s) {
@@ -1184,11 +1216,11 @@
           "This form of requestPasswordReset(email, body?, query?) is deprecated. Consider replacing it with requestPasswordReset(email, options?).",
           i,
           t,
-          s
+          s,
         )),
-        this.client
-          .send(this.baseCollectionPath + "/request-password-reset", i)
-          .then(() => !0)
+          this.client
+            .send(this.baseCollectionPath + "/request-password-reset", i)
+            .then(() => !0)
       );
     }
     async confirmPasswordReset(e, t, s, i, n) {
@@ -1201,11 +1233,11 @@
           "This form of confirmPasswordReset(token, password, passwordConfirm, body?, query?) is deprecated. Consider replacing it with confirmPasswordReset(token, password, passwordConfirm, options?).",
           o,
           i,
-          n
+          n,
         )),
-        this.client
-          .send(this.baseCollectionPath + "/confirm-password-reset", o)
-          .then(() => !0)
+          this.client
+            .send(this.baseCollectionPath + "/confirm-password-reset", o)
+            .then(() => !0)
       );
     }
     async requestVerification(e, t, s) {
@@ -1215,11 +1247,11 @@
           "This form of requestVerification(email, body?, query?) is deprecated. Consider replacing it with requestVerification(email, options?).",
           i,
           t,
-          s
+          s,
         )),
-        this.client
-          .send(this.baseCollectionPath + "/request-verification", i)
-          .then(() => !0)
+          this.client
+            .send(this.baseCollectionPath + "/request-verification", i)
+            .then(() => !0)
       );
     }
     async confirmVerification(e, t, s) {
@@ -1229,23 +1261,23 @@
           "This form of confirmVerification(token, body?, query?) is deprecated. Consider replacing it with confirmVerification(token, options?).",
           i,
           t,
-          s
+          s,
         )),
-        this.client
-          .send(this.baseCollectionPath + "/confirm-verification", i)
-          .then(() => {
-            const t = getTokenPayload(e),
-              s = this.client.authStore.model;
-            return (
-              s &&
+          this.client
+            .send(this.baseCollectionPath + "/confirm-verification", i)
+            .then(() => {
+              const t = getTokenPayload(e),
+                s = this.client.authStore.model;
+              return (
+                s &&
                 !s.verified &&
                 s.id === t.id &&
                 s.collectionId === t.collectionId &&
                 ((s.verified = !0),
-                this.client.authStore.save(this.client.authStore.token, s)),
-              !0
-            );
-          })
+                  this.client.authStore.save(this.client.authStore.token, s)),
+                  !0
+              );
+            })
       );
     }
     async requestEmailChange(e, t, s) {
@@ -1255,11 +1287,11 @@
           "This form of requestEmailChange(newEmail, body?, query?) is deprecated. Consider replacing it with requestEmailChange(newEmail, options?).",
           i,
           t,
-          s
+          s,
         )),
-        this.client
-          .send(this.baseCollectionPath + "/request-email-change", i)
-          .then(() => !0)
+          this.client
+            .send(this.baseCollectionPath + "/request-email-change", i)
+            .then(() => !0)
       );
     }
     async confirmEmailChange(e, t, s, i) {
@@ -1269,45 +1301,44 @@
           "This form of confirmEmailChange(token, password, body?, query?) is deprecated. Consider replacing it with confirmEmailChange(token, password, options?).",
           n,
           s,
-          i
+          i,
         )),
-        this.client
-          .send(this.baseCollectionPath + "/confirm-email-change", n)
-          .then(() => {
-            const t = getTokenPayload(e),
-              s = this.client.authStore.model;
-            return (
-              s &&
+          this.client
+            .send(this.baseCollectionPath + "/confirm-email-change", n)
+            .then(() => {
+              const t = getTokenPayload(e),
+                s = this.client.authStore.model;
+              return (
+                s &&
                 s.id === t.id &&
                 s.collectionId === t.collectionId &&
-                this.client.authStore.clear(),
-              !0
-            );
-          })
+                this.client.authStore.clear(), !0
+              );
+            })
       );
     }
     async listExternalAuths(e, t) {
       return (
         (t = Object.assign({ method: "GET" }, t)),
-        this.client.send(
-          this.baseCrudPath + "/" + encodeURIComponent(e) + "/external-auths",
-          t
-        )
+          this.client.send(
+            this.baseCrudPath + "/" + encodeURIComponent(e) + "/external-auths",
+            t,
+          )
       );
     }
     async unlinkExternalAuth(e, t, s) {
       return (
         (s = Object.assign({ method: "DELETE" }, s)),
-        this.client
-          .send(
-            this.baseCrudPath +
-              "/" +
-              encodeURIComponent(e) +
-              "/external-auths/" +
-              encodeURIComponent(t),
-            s
-          )
-          .then(() => !0)
+          this.client
+            .send(
+              this.baseCrudPath +
+                "/" +
+                encodeURIComponent(e) +
+                "/external-auths/" +
+                encodeURIComponent(t),
+              s,
+            )
+            .then(() => !0)
       );
     }
     _replaceQueryParams(e, t = {}) {
@@ -1315,36 +1346,38 @@
         i = "";
       e.indexOf("?") >= 0 &&
         ((s = e.substring(0, e.indexOf("?"))),
-        (i = e.substring(e.indexOf("?") + 1)));
+          (i = e.substring(e.indexOf("?") + 1)));
       const n = {},
         o = i.split("&");
       for (const e of o) {
         if ("" == e) continue;
         const t = e.split("=");
         n[decodeURIComponent(t[0].replace(/\+/g, " "))] = decodeURIComponent(
-          (t[1] || "").replace(/\+/g, " ")
+          (t[1] || "").replace(/\+/g, " "),
         );
       }
-      for (let e in t)
+      for (let e in t) {
         t.hasOwnProperty(e) && (null == t[e] ? delete n[e] : (n[e] = t[e]));
+      }
       i = "";
-      for (let e in n)
+      for (let e in n) {
         n.hasOwnProperty(e) &&
           ("" != i && (i += "&"),
-          (i +=
-            encodeURIComponent(e.replace(/%20/g, "+")) +
-            "=" +
-            encodeURIComponent(n[e].replace(/%20/g, "+"))));
+            (i += encodeURIComponent(e.replace(/%20/g, "+")) +
+              "=" +
+              encodeURIComponent(n[e].replace(/%20/g, "+"))));
+      }
       return "" != i ? s + "?" + i : s;
     }
   }
   function openBrowserPopup(e) {
-    if ("undefined" == typeof window || !window?.open)
+    if ("undefined" == typeof window || !window?.open) {
       throw new ClientResponseError(
         new Error(
-          "Not in a browser context - please pass a custom urlCallback function."
-        )
+          "Not in a browser context - please pass a custom urlCallback function.",
+        ),
       );
+    }
     let t = 1024,
       s = 768,
       i = window.innerWidth,
@@ -1363,7 +1396,7 @@
         r +
         ",left=" +
         o +
-        ",resizable,menubar=no"
+        ",resizable,menubar=no",
     );
   }
   class CollectionService extends CrudService {
@@ -1374,9 +1407,8 @@
       return (
         (s = Object.assign(
           { method: "PUT", body: { collections: e, deleteMissing: t } },
-          s
-        )),
-        this.client.send(this.baseCrudPath + "/import", s).then(() => !0)
+          s,
+        )), this.client.send(this.baseCrudPath + "/import", s).then(() => !0)
       );
     }
   }
@@ -1385,13 +1417,12 @@
       return (
         ((s = Object.assign({ method: "GET" }, s)).query = Object.assign(
           { page: e, perPage: t },
-          s.query
-        )),
-        this.client.send("/api/logs", s)
+          s.query,
+        )), this.client.send("/api/logs", s)
       );
     }
     async getOne(e, t) {
-      if (!e)
+      if (!e) {
         throw new ClientResponseError({
           url: this.client.buildUrl("/api/logs/"),
           status: 404,
@@ -1401,15 +1432,16 @@
             data: {},
           },
         });
+      }
       return (
         (t = Object.assign({ method: "GET" }, t)),
-        this.client.send("/api/logs/" + encodeURIComponent(e), t)
+          this.client.send("/api/logs/" + encodeURIComponent(e), t)
       );
     }
     async getStats(e) {
       return (
         (e = Object.assign({ method: "GET" }, e)),
-        this.client.send("/api/logs/stats", e)
+          this.client.send("/api/logs/stats", e)
       );
     }
   }
@@ -1417,7 +1449,7 @@
     async check(e) {
       return (
         (e = Object.assign({ method: "GET" }, e)),
-        this.client.send("/api/health", e)
+          this.client.send("/api/health", e)
       );
     }
   }
@@ -1441,7 +1473,7 @@
     async getToken(e) {
       return (
         (e = Object.assign({ method: "POST" }, e)),
-        this.client.send("/api/files/token", e).then((e) => e?.token || "")
+          this.client.send("/api/files/token", e).then((e) => e?.token || "")
       );
     }
   }
@@ -1449,40 +1481,40 @@
     async getFullList(e) {
       return (
         (e = Object.assign({ method: "GET" }, e)),
-        this.client.send("/api/backups", e)
+          this.client.send("/api/backups", e)
       );
     }
     async create(e, t) {
       return (
         (t = Object.assign({ method: "POST", body: { name: e } }, t)),
-        this.client.send("/api/backups", t).then(() => !0)
+          this.client.send("/api/backups", t).then(() => !0)
       );
     }
     async upload(e, t) {
       return (
         (t = Object.assign({ method: "POST", body: e }, t)),
-        this.client.send("/api/backups/upload", t).then(() => !0)
+          this.client.send("/api/backups/upload", t).then(() => !0)
       );
     }
     async delete(e, t) {
       return (
         (t = Object.assign({ method: "DELETE" }, t)),
-        this.client
-          .send(`/api/backups/${encodeURIComponent(e)}`, t)
-          .then(() => !0)
+          this.client
+            .send(`/api/backups/${encodeURIComponent(e)}`, t)
+            .then(() => !0)
       );
     }
     async restore(e, t) {
       return (
         (t = Object.assign({ method: "POST" }, t)),
-        this.client
-          .send(`/api/backups/${encodeURIComponent(e)}/restore`, t)
-          .then(() => !0)
+          this.client
+            .send(`/api/backups/${encodeURIComponent(e)}/restore`, t)
+            .then(() => !0)
       );
     }
     getDownloadUrl(e, t) {
       return this.client.buildUrl(
-        `/api/backups/${encodeURIComponent(t)}?token=${encodeURIComponent(e)}`
+        `/api/backups/${encodeURIComponent(t)}?token=${encodeURIComponent(e)}`,
       );
     }
   }
@@ -1506,8 +1538,8 @@
     collection(e) {
       return (
         this.recordServices[e] ||
-          (this.recordServices[e] = new RecordService(this, e)),
-        this.recordServices[e]
+        (this.recordServices[e] = new RecordService(this, e)),
+          this.recordServices[e]
       );
     }
     autoCancellation(e) {
@@ -1516,8 +1548,8 @@
     cancelRequest(e) {
       return (
         this.cancelControllers[e] &&
-          (this.cancelControllers[e].abort(), delete this.cancelControllers[e]),
-        this
+        (this.cancelControllers[e].abort(), delete this.cancelControllers[e]),
+          this
       );
     }
     cancelAllRequests() {
@@ -1537,12 +1569,11 @@
             i = "'" + i.replace(/'/g, "\\'") + "'";
             break;
           default:
-            i =
-              null === i
-                ? "null"
-                : i instanceof Date
-                ? "'" + i.toISOString().replace("T", " ") + "'"
-                : "'" + JSON.stringify(i).replace(/'/g, "\\'") + "'";
+            i = null === i
+              ? "null"
+              : i instanceof Date
+              ? "'" + i.toISOString().replace("T", " ") + "'"
+              : "'" + JSON.stringify(i).replace(/'/g, "\\'") + "'";
         }
         e = e.replaceAll("{:" + s + "}", i);
       }
@@ -1555,23 +1586,23 @@
       let t = this.baseUrl;
       return (
         "undefined" == typeof window ||
-          !window.location ||
-          t.startsWith("https://") ||
-          t.startsWith("http://") ||
-          ((t = window.location.origin?.endsWith("/")
-            ? window.location.origin.substring(
-                0,
-                window.location.origin.length - 1
-              )
-            : window.location.origin || ""),
+        !window.location ||
+        t.startsWith("https://") ||
+        t.startsWith("http://") ||
+        ((t = window.location.origin?.endsWith("/")
+          ? window.location.origin.substring(
+            0,
+            window.location.origin.length - 1,
+          )
+          : window.location.origin || ""),
           this.baseUrl.startsWith("/") ||
-            ((t += window.location.pathname || "/"),
+          ((t += window.location.pathname || "/"),
             (t += t.endsWith("/") ? "" : "/")),
           (t += this.baseUrl)),
-        e &&
+          e &&
           ((t += t.endsWith("/") ? "" : "/"),
-          (t += e.startsWith("/") ? e.substring(1) : e)),
-        t
+            (t += e.startsWith("/") ? e.substring(1) : e)),
+          t
       );
     }
     async send(e, t) {
@@ -1583,9 +1614,9 @@
           ? ((s = e.url || s), (t = e.options || t))
           : Object.keys(e).length &&
             ((t = e),
-            console?.warn &&
+              console?.warn &&
               console.warn(
-                "Deprecated format of beforeSend return: please use `return { url, options }`, instead of `return options`."
+                "Deprecated format of beforeSend return: please use `return { url, options }`, instead of `return options`.",
               ));
       }
       if (void 0 !== t.query) {
@@ -1604,13 +1635,14 @@
           } catch (e) {}
           if (
             (this.afterSend && (t = await this.afterSend(e, t)),
-            e.status >= 400)
-          )
+              e.status >= 400)
+          ) {
             throw new ClientResponseError({
               url: e.url,
               status: e.status,
               data: t,
             });
+          }
           return t;
         })
         .catch((e) => {
@@ -1619,34 +1651,34 @@
     }
     initSendOptions(e, t) {
       if (
-        (((t = Object.assign({ method: "GET" }, t)).body =
-          this.convertToFormDataIfNeeded(t.body)),
-        normalizeUnknownQueryParams(t),
-        (t.query = Object.assign({}, t.params, t.query)),
-        void 0 === t.requestKey &&
+        (((t = Object.assign({ method: "GET" }, t)).body = this
+          .convertToFormDataIfNeeded(t.body)),
+          normalizeUnknownQueryParams(t),
+          (t.query = Object.assign({}, t.params, t.query)),
+          void 0 === t.requestKey &&
           (!1 === t.$autoCancel || !1 === t.query.$autoCancel
             ? (t.requestKey = null)
             : (t.$cancelKey || t.query.$cancelKey) &&
               (t.requestKey = t.$cancelKey || t.query.$cancelKey)),
-        delete t.$autoCancel,
-        delete t.query.$autoCancel,
-        delete t.$cancelKey,
-        delete t.query.$cancelKey,
-        null !== this.getHeader(t.headers, "Content-Type") ||
+          delete t.$autoCancel,
+          delete t.query.$autoCancel,
+          delete t.$cancelKey,
+          delete t.query.$cancelKey,
+          null !== this.getHeader(t.headers, "Content-Type") ||
           this.isFormData(t.body) ||
           (t.headers = Object.assign({}, t.headers, {
             "Content-Type": "application/json",
           })),
-        null === this.getHeader(t.headers, "Accept-Language") &&
+          null === this.getHeader(t.headers, "Accept-Language") &&
           (t.headers = Object.assign({}, t.headers, {
             "Accept-Language": this.lang,
           })),
-        this.authStore.token &&
+          this.authStore.token &&
           null === this.getHeader(t.headers, "Authorization") &&
           (t.headers = Object.assign({}, t.headers, {
             Authorization: this.authStore.token,
           })),
-        this.enableAutoCancellation && null !== t.requestKey)
+          this.enableAutoCancellation && null !== t.requestKey)
       ) {
         const s = t.requestKey || (t.method || "GET") + e;
         delete t.requestKey, this.cancelRequest(s);
@@ -1663,8 +1695,9 @@
         null === e ||
         this.isFormData(e) ||
         !this.hasBlobField(e)
-      )
+      ) {
         return e;
+      }
       const t = new FormData();
       for (const s in e) {
         const i = e[s];
@@ -1681,12 +1714,14 @@
     hasBlobField(e) {
       for (const t in e) {
         const s = Array.isArray(e[t]) ? e[t] : [e[t]];
-        for (const e of s)
+        for (const e of s) {
           if (
             ("undefined" != typeof Blob && e instanceof Blob) ||
             ("undefined" != typeof File && e instanceof File)
-          )
+          ) {
             return !0;
+          }
+        }
       }
       return !1;
     }
@@ -1708,14 +1743,15 @@
         if (null === e[s]) continue;
         const i = e[s],
           n = encodeURIComponent(s);
-        if (Array.isArray(i))
+        if (Array.isArray(i)) {
           for (const e of i) t.push(n + "=" + encodeURIComponent(e));
-        else
+        } else {
           i instanceof Date
             ? t.push(n + "=" + encodeURIComponent(i.toISOString()))
             : null !== typeof i && "object" == typeof i
             ? t.push(n + "=" + encodeURIComponent(JSON.stringify(i)))
             : t.push(n + "=" + encodeURIComponent(i));
+        }
       }
       return t.join("&");
     }
