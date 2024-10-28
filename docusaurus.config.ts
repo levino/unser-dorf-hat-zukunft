@@ -92,9 +92,10 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Unterlagen',
+          label: 'Bewerbungsunterlagen',
         },
         { to: '/berichte', label: 'Berichte', position: 'left' },
+        { to: '/about', label: 'Über die Seite', position: 'left' },
         {
           href: 'https://github.com/levino/unser-dorf-hat-zukunft',
           label: 'GitHub',
