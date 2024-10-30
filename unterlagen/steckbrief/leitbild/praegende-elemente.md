@@ -4,6 +4,12 @@ sidebar_position: 2
 
 # Prägende Elemente ❌
 
+## Alter des Dorfes
+
+1175 Jahre alt (2025). Text zur Historie.
+
+## Haufendorf / Form
+
 ## Wasserschloss
 
 Das Rössinger
