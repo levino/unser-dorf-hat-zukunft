@@ -10,6 +10,12 @@ einzelnen Punkte aus dem Bewerbungsformblatt durchzugehen. Peter hatte
 zahlreiche Hinweise und Ideen, welche ich zunächst stichpunktartig
 aufgeschrieben habe und später weiter ausarbeiten will.
 
-Besonders interessant fand ich den Dorferneuerungsplan aus den 1990er(?) Jahren,
+Besonders interessant fand ich den Dorferneuerungsplan aus den 1980er Jahren,
 den Peter mir vorgelegt hat. Ich werde versuchen, diesen in Kopie oder am Besten
 digital zu bekommen.
+
+<!-- truncate -->
+
+Hier ein Photo von den Angaben zum Planungsbüro.
+
+![Angaben zum Planungsbüro](./planungsbuero.jpg)
