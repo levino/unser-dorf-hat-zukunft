@@ -4,6 +4,12 @@ sidebar_position: 1
 
 # Stärken und Schwächen ❌
 
+- Gemeinsamkeit / Gemeinschaft
+
+## Schwäche
+
+- Einheitsgemeinde, keine Finanzhoheit
+
 Hier sammeln wir die Stärken und Schwächen Rössings
 
 :::info

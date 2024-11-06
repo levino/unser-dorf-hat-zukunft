@@ -25,6 +25,8 @@ Im
 gibt es Friseurleistungen, sowie Kuchen und Getränke mit Sitzmöglichkeiten vor
 Ort.
 
+Plus Post!
+
 ### Eier und Gemüse
 
 An einigen Stellen im Dorf gibt es die Möglichkeit Eier und Gemüse (z.B.
@@ -52,3 +54,7 @@ Mit dem Fahrrad kann man sich auch dank der geringen Steigung gut im Rössinger
 Umland bewegen. Die Anzahl und Qualität der Fahrradwege könnte besser sein, aber
 wenn man sich ein wenig auskennt, kann man die zahlreichen landwirtschaftlichen
 Fahrradwege nutzen um fern vom Autoverkehr die Nachbardörfer zu erreichen.
+
+## Industrie
+
+Nicht möglich für Dorf, sondern Gemeindesache.

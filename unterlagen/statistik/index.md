@@ -20,9 +20,11 @@ sidebar_position: 4
 
 ## Einwohner:innen
 
-| 1980                          | 2000                          | 2020                          | aktuell (2024)                |
-| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
-| <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
+| 1980 | 2000 | 2020                          | aktuell (2024)                |
+| ---- | ---- | ----------------------------- | ----------------------------- |
+| 1987 | 1840 | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
+
+Quelle: Gemeinde? Prüfen.
 
 ## Beschäftigte
 
@@ -41,7 +43,7 @@ sidebar_position: 4
 | Schule                                 | nein <!-- TODO: Wert prüfen --> |
 | Dorfgemeinschaftshaus                  | 1                               |
 | Kindergarten/ -betreuung o.ä.          | 2 <!-- TODO: Wert prüfen -->    |
-| Sportanlagen                           | 3 <!-- TODO: Wert prüfen -->    |
+| Sportanlagen                           | 4 <!-- TODO: Wert prüfen -->    |
 | Besondere Angebote der Grundversorgung | 1 (Rnah)                        |
 | Besondere Angebote des ÖPNV            | nein                            |
 
@@ -60,15 +62,15 @@ sidebar_position: 4
 | -------------------- | ----------------------------- | ----------------------------- |
 | Beabsichtigt im Jahr | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
 | Im Programm seit     | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
-| Abgeschlossen seit   | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
+| Abgeschlossen seit   | 1990                          | 1996 (1953)                   |
 
 ## Historische Elemente
 
 - Anzahl denkmalgeschützte Elemente:
-- Dorfchronik: ja ([Jahr <!-- TODO: Wert eintragen -->])
+- Dorfchronik: ja (fortlaufend seit 1900)
 
 ## Teilnahme am Wettbewerb
 
-| Kreisebene                    | Regionale Ebene               | Landesebene                   |
-| ----------------------------- | ----------------------------- | ----------------------------- |
-| <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
+| Kreisebene                   | Regionale Ebene | Landesebene                   |
+| ---------------------------- | --------------- | ----------------------------- |
+| 1963, 1994, 1999, 2005, 2014 | 2005, 2014      | <!-- TODO: Wert eintragen --> |

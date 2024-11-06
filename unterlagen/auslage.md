@@ -34,6 +34,8 @@ der Gemeinde Nordstemmen bekommen. Yannik Marcao schrieb dazu:
 
 ## ggf. Dorferneuerungsplan
 
+Gibt es von 1986. Sehr interessant! Unbedingt digitalisieren!
+
 <!-- TODO: besorgen -->
 
 ## sonstige Pläne und Bildmaterial zur Entwicklung des Dorfes, - Zeitungsberichte usw.

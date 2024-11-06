@@ -8,3 +8,9 @@
 > insbesondere Denkmale
 
 :::
+
+- Kriegerdenkmal
+- Brunnen ehemals Rittergut 2, Brendecke
+- Wehr (Mühle)
+- Pfarrhaus
+- Erinnerungsstein an 100 Jahre Schlacht bei Leipzig von 1913
