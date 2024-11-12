@@ -56,3 +56,9 @@ Rückfragen oder Anmerkungen auf mich zu. Gerne auch per Telefon unter
 Mit freundlichen Grüßen
 
 Levin Keller
+
+:::note
+
+Von Levin am 12. November abgeschickt.
+
+:::
