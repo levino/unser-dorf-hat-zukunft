@@ -1,19 +1,17 @@
-# Datenanfrage bei der Gemeinde
+# Datenanfrage für Wettbewerb Unser Dorf hat Zukunft 2025
 
 Sehr geehrte Damen und Herren,
 
 das Dorf Rössing bewirbt sich im Wettbewerb Unser Dorf hat Zukunft auf
-Regionalebene. Die Bürgerstiftung Rössing erstellt in Absprache mit dem Dorfrat
-und dem Kulturkreis die Bewerbungsunterlagen. Ich unterstütze die Bürgerstiftung
-Rössing dabei. Für die Bewerbung benötige ich die folgenden Angaben. Leider bin
-ich nicht in der Lage, diese aus öffentlich zugänglichen Datenbanken zu
-gewinnen. Ich hoffe deshalb auf Ihre wohlwollende Unterstützung. Gut wäre es,
-wenn Sie mir zusätzlich zu den konkreten Angaben auch die Quellen nennen können.
-Für Hinweise, wie ich selbst die Daten aus öffentlichen Quellen abrufen kann
-(Links, etc.) wäre ich auch sehr dankbar. Ich gehe davon aus, dass die
-Bearbeitung dieser Anfrage kostenlos ist. Sollten Sie gezwungen sein, auf Grund
-von hohem Aufwand, Gebühren zu verlangen, bitte ich um Rücksprache, bevor die
-Aufwände erzeugt werden.
+Regionalebene. Die Bürgerstiftung Rössing erstellt in Absprache mit dem Ortsrat
+und dem Kulturkreis die Bewerbungsunterlagen und übernimmt die Federführung für
+die UDhZ-Bewerbung auf Regional- und Landesebene. Ich unterstütze die
+Bürgerstiftung Rössing dabei. Für die Bewerbung benötige ich die folgenden
+Angaben. Leider bin ich nicht in der Lage, diese aus öffentlich zugänglichen
+Datenbanken zu gewinnen. Ich hoffe deshalb auf Ihre wohlwollende Unterstützung.
+Gut wäre es, wenn Sie mir zusätzlich zu den konkreten Angaben auch die Quellen
+nennen können. Für Hinweise, wie ich selbst die Daten aus öffentlichen Quellen
+abrufen kann (Links, etc.) wäre ich auch sehr dankbar.
 
 ## Anzahl der Einwohner:innen
 
@@ -51,7 +49,7 @@ Aufwände erzeugt werden.
 
 - Bebauungspläne _Dateiformat? Siehe auch oben._
 
-Ich danke im Vorab für Ihre Zeit und Unterstützung. Bitte kommen Sie bei
+Ich danke im Voraus für Ihre Zeit und Unterstützung. Bitte kommen Sie bei
 Rückfragen oder Anmerkungen auf mich zu. Gerne auch per Telefon unter
 +4915156041082.
 
