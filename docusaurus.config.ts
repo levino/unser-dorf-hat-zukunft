@@ -39,6 +39,24 @@ const config: Config = {
         steps: 2, // the max number of images generated between min and max (inclusive)
       },
     ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'emails',
+        /**
+         * URL route for the blog section of your site.
+         * *DO NOT* include a trailing slash.
+         */
+        routeBasePath: 'emails',
+        /**
+         * Path to data on filesystem relative to site dir.
+         */
+        path: './emails',
+      },
+    ],
   ],
 
   presets: [
@@ -95,6 +113,7 @@ const config: Config = {
           label: 'Bewerbungsunterlagen',
         },
         { to: '/berichte', label: 'Berichte', position: 'left' },
+        { to: '/emails', label: 'E-Mails', position: 'left' },
         { to: '/about', label: 'Über die Seite', position: 'left' },
         {
           href: 'https://github.com/levino/unser-dorf-hat-zukunft',
