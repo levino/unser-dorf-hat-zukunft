@@ -6,7 +6,7 @@ wie Udo bereits geschrieben hat, werden wir uns am 19. November um 19 Uhr im
 Dorfgemeinschaftshaus zu einer Arbeitssitzung treffen. Die Unterlagen für den
 Wettbewerb müssen voraussichtlich im Januar abgegeben werden und bis dahin ist
 noch viel Arbeit notwendig. Wir bitten Euch, Euch - nach persönlichen
-Möglichkeiten - bereits vor der Sitzung mit den Inhalten vertraut zu machen.
+Möglichkeiten - bereits vor der Sitzung mit den Inhalten vertraut zu machen.<!-- truncate -->
 Dazu wäre es am Besten, wenn ihr die Inhalte der erstellten
 [Homepage](https://zukunft.rössing.de) studiert. Wortbeiträge könnt ihr auch
 schon vorab im
