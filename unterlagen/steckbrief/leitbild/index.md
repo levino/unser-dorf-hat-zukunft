@@ -23,7 +23,7 @@ Sowie:
 >   [Stärken bzw. seine Schwächen](./staerken-schwaechen.md) sieht
 > - [prägende Elemente](./praegende-elemente.md), die erhalten und entwickelt
 >   werden sollen
-> - welche Merkmale die [Zukunftsfähigkeit](./zukunftsfähigkeit.md) des Dorfes
+> - welche Merkmale die [Zukunftsfähigkeit](./zukunftsfaehigkeit.md) des Dorfes
 >   ausmachen
 > - [Formen der Zusammenarbeit](./zusammenarbeit.md) (lokale, regionale und
 >   thematische Arbeitskreise)

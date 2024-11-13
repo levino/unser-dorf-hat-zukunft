@@ -13,6 +13,8 @@ Gut wäre es, wenn Sie mir zusätzlich zu den konkreten Angaben auch die Quellen
 nennen können. Für Hinweise, wie ich selbst die Daten aus öffentlichen Quellen
 abrufen kann (Links, etc.) wäre ich auch sehr dankbar.
 
+<!-- truncate -->
+
 ## Anzahl der Einwohner:innen
 
 - 1980
