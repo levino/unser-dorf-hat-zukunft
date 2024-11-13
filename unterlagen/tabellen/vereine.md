@@ -11,3 +11,7 @@ sidebar_label: Vereine ❌
 > Anzahl der Vereine und deren Mitgliederzahl.
 
 :::
+
+Anzahl Vereine: 24[^1]
+
+[^1]: Quelle: [Unterlagen Kreiswettbewerb](/archiv/kreiswettbewerb)

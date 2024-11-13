@@ -13,7 +13,8 @@
         "unifiedjs.vscode-mdx",
         "denoland.vscode-deno",
         "streetsidesoftware.code-spell-checker",
-        "streetsidesoftware.code-spell-checker-german"
+        "streetsidesoftware.code-spell-checker-german",
+        "tomoki1207.pdf"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "zsh",
