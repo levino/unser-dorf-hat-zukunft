@@ -29,3 +29,9 @@ der Seite oder auf der Versammlung einbringen könnt.
 Ich freue mich auf eine produktive Sitzung
 
 Euer Levin
+
+:::note
+
+Diese Nachricht wurde mit der Einladung zum Arbeitstreffen von Levin am 13. November verschickt.
+
+:::
