@@ -73,8 +73,8 @@ Das alles sind Ressourcen, die ich lieber in andere Bereiche investieren möchte
 #### Warum nutzt du Google und GitHub für den Login?
 
 Die beiden Anbieter sind seriös und sicher. Um möglichst einfach an den Inhalten
-mitwirken zu können braucht man ohnehin einen Github-Account, deshalb habe ich
-Github eingebunden. Viele wollen aber nur lesen, für diese Leute habe ich Google
+mitwirken zu können braucht man ohnehin einen Github-Account. Deshalb habe ich
+Github eingebunden. Viele wollen aber nur lesen. Für diese Leute habe ich Google
 eingebunden. Man kann auch beides gleichzeitig verwenden.
 
 Sowohl Github als auch Google bieten modernste Sicherheit für den Account und
@@ -89,12 +89,13 @@ unterstützt die folgenden Anbieter zusätzlich zu Google und GitHub:
 - GitLab
 - Discord
 - Spotify
+- u.v.m.
 
 Wenn du dir einen dieser Anbieter wünschst, schreibe mir einfach eine E-Mail an
 **[post@levinkeller.de](mailto:post@levinkeller.de)**. Ich prüfe dann, ob ich
-diesen Anbieter für den Login hinzufügen kann. Das ist allerings relativ
-aufwendig. Prüfe bitte, ob es nicht für Dich leichter ist, einen Google- oder
-Github-Account anzulegen.
+diesen Anbieter für den Login hinzufügen kann. Das ist allerdings relativ
+aufwendig. Prüfe bitte, ob es nicht doch leichter ist, wenn Du Dir einfach einen
+Google- oder Github-Account anlegst.
 
 </div>
 
