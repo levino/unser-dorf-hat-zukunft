@@ -20,6 +20,19 @@ Bitte logge Dich ein, um die Inhalte zu sehen.
 
 ## FAQ
 
+### Wie kann ich mir einen Account machen?
+
+Es ist nicht nötig, einen Account anzulegen. Wenn Du einen Google-Account hast,
+drück auf "Login mit Google", wenn Du einen Github-Account hast, drück auf
+"Login mit GitHub". Folge danach jeweils den Anweisungen, die Du siehst.
+
+Wenn Du weder einen Account bei Google noch bei Github hast, drück einfach eine
+der beiden Schaltflächen und lege Dir einen neuen Account bei Google oder GitHub
+an (ich empfehle GitHub, das ist auch nützlich für die Bearbeitung der Inhalte
+und den Zugang zum Forum). Folge danach wieder den Anweisungen, die Du siehst.
+Falls Du dabei stecken bleibst, komm wieder auf diese Seite und klick wieder auf
+die gleiche Schaltfläche wie zuvor.
+
 ### Warum bietest du keinen Login mit Benutzername und Passwort an?
 
 Der Login mit Benutzername und Passwort, bzw. E-Mail und Passwort ist technisch
