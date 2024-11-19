@@ -3,6 +3,7 @@ import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
 
 const config: Config = {
+  noIndex: true,
   title: 'UDhZ - Rössing',
   tagline: 'Unterlagen für den Wettbewerb Unser Dorf hat Zukunft',
   favicon: 'img/favicon.ico',
