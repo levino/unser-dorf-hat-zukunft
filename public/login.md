@@ -40,8 +40,8 @@ ist.
 #### Unsicher
 
 Um den Zugang korrekt abzusichern, müsste ich zusätzlich
-Zwei-Faktor-Authentifizierung implementieren und anbieten. Das ist aber auch
-Kostengründen nicht abzubilden. Insofern wäre nur ein einfacher Login mit
+Zwei-Faktor-Authentifizierung implementieren und anbieten. Das ist aber aus
+Aufwandsgründen nicht abbildbar. Insofern wäre nur ein einfacher Login mit
 E-Mail-Adresse und Passwort möglich, was nicht sicher ist.
 
 #### Kosten
