@@ -8,7 +8,7 @@ title: Einloggen
 
 Bitte logge Dich ein, um die Inhalte zu sehen.
 
-<div class="padding-bottom--xl">
+<div class="padding-bottom--md">
 <button type="button" class="button button--primary" id="loginWithGithub">
     Login mit GitHub
 </button>
