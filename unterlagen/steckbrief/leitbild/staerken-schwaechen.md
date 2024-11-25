@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # Stärken und Schwächen ❌
 
+## Stärken
+
 - Gemeinsamkeit / Gemeinschaft
 
 ## Schwäche
