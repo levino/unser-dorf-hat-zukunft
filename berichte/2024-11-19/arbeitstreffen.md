@@ -10,6 +10,8 @@ hat Zukunft" vorzubereiten. Im Dorfgemeinschaftshaus (DGH) kamen 13 Teilnehmer
 zusammen, 5 weitere hatten sich entschuldigt. Die Veranstaltung dauerte von 19
 bis 20 Uhr.
 
+<!-- truncate -->
+
 ## Ergebnisse und Diskussionen
 
 ### Beitrag zur Kultur
