@@ -13,14 +13,13 @@ sidebar_label: Veranstaltungen ❌
 :::
 
 - Dorfgemeinschaftsfest (seit 1959, jetzt alle 3 Jahre)
-- Weihnachtsmarkt
-- Osterfeuer
-- Vorträge (Landfrauen, Dorfpflege)
-- Sven Plöger
-- Straßenfeste (Lange Straße?, Bergmannsiedlung, Loderwinkel, Fahlen Kamp)
-- Laternenumzug (Grundschule mit Musikzug?)
-- Feuerwehrspektakel
-- \1. Mai
-- \3. Oktober
-- Bosselturnier
-- Kinderfasching und Kinderweihnachtsfeier , Ostereiersuche VSV
+- Weihnachtsmarkt (alle Vereine)
+- Osterfeuer (Dorfpflege)
+- Diverse Vorträge (Landfrauen, Dorfpflege, etc.)
+- Vorträge über Klima durch Sven Plöger (dem Ort persönlich verbunden, bislang 2019 und 2023)
+- Laternenumzug (FFW)
+- Drei-Eichen-Spektakel (FFW)
+- \1. Mai - Maifest am Dorfgemeinschaftshaus mit Konzert des Musikzugs der Freiwilligen Feuerwehr (CDU)
+- \3. Oktober - Tag der Deutschen Einheit mit Sektempfang am Dorfgemeinschafshaus mit Konzert des Musikzugs der Freiwilligen Feuerwehr (Ortsrat)
+- Oktober - Bosselturnier mit Grillabend (CDU)
+- Kinderfasching, Kinderweihnachtsfeier und Ostereiersuche (VSV)

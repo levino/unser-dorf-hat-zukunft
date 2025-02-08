@@ -24,6 +24,10 @@ damit für den Wettbewerb auf Regionalebene qualifiziert. Auf dieser Seite geht
 es zunächst um den Wettbewerb auf Regionalebene. Sollten wir diesen gewinnen,
 beschäftigen wir uns mit dem Wettbewerb auf Landesebene.
 
+## Bewerbung
+
+Wir müssen für die Bewerbung eine Word-Datei ausfüllen und wir halten einen [Arbeitsstand](./bewerbung.docx) dieser Datei aktuell.
+
 ## Unterlagen
 
 Es gibt ein paar interessante Unterlagen vom Land:
