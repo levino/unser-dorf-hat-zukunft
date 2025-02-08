@@ -14,63 +14,63 @@ sidebar_position: 4
 
 ## Fläche
 
-| Fläche des Dorfes in ha       | Davon LF in ha                | Davon FF in ha                |
-| ----------------------------- | ----------------------------- | ----------------------------- |
-| <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
+| Fläche des Dorfes in ha | Davon LF in ha                | Davon FF in ha                |
+| ----------------------- | ----------------------------- | ----------------------------- |
+| 1038 (Stand 1973)       | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
 
 ## Einwohner:innen
 
-| 1980 | 2000 | 2020 | aktuell (2024) |
-| ---- | ---- | ---- | -------------- |
-| 1987 | 1840 | 1626 | 1630           |
+| 1980 | 2000 | 2020 | aktuell (19.11.2024) |
+| ---- | ---- | ---- | -------------------- |
+| 1380 | 1880 | 1660 | 1630                 |
 
-Quelle: Gemeinde? Prüfen.
+Quelle: Fachbereich 2, Gemeinde Nordstemmen, E-Mail vom 19.11.2024
 
 ## Beschäftigte
 
-| Dienstleistungen/Handel       | Handwerk/Industrie            | Land- und Forstwirtschaft     | Sonstige                      |
-| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
-| <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
+| Dienstleistungen/Handel | Handwerk/Industrie | Land- und Forstwirtschaft | Sonstige  |
+| ----------------------- | ------------------ | ------------------------- | --------- |
+| unbekannt               | unbekannt          | unbekannt                 | unbekannt |
 
 ## Dorfstruktur
 
-| Thema                                  | Angabe                          |
-| -------------------------------------- | ------------------------------- |
-| Kirche                                 | 1                               |
-| Friedhof                               | 1                               |
-| Sozialstation o.ä.                     | nein                            |
-| Gaststätten                            | 2                               |
-| Schule                                 | nein <!-- TODO: Wert prüfen --> |
-| Dorfgemeinschaftshaus                  | 1                               |
-| Kindergarten/ -betreuung o.ä.          | 2 <!-- TODO: Wert prüfen -->    |
-| Sportanlagen                           | 4 <!-- TODO: Wert prüfen -->    |
-| Besondere Angebote der Grundversorgung | 1 (Rnah)                        |
-| Besondere Angebote des ÖPNV            | nein                            |
+| Thema                                  | Angabe   |
+| -------------------------------------- | -------- |
+| Kirche                                 | 1        |
+| Friedhof                               | 1        |
+| Sozialstation o.ä.                     | nein     |
+| Gaststätten                            | 2        |
+| Schule                                 | nein     |
+| Dorfgemeinschaftshaus                  | 1        |
+| Kindergarten/ -betreuung o.ä.          | 2        |
+| Sportanlagen                           | 4        |
+| Besondere Angebote der Grundversorgung | 1 (Rnah) |
+| Besondere Angebote des ÖPNV            | nein     |
 
 ## Gemeindliche Planungen
 
-| Thema                                 | Angabe                                  |
-| ------------------------------------- | --------------------------------------- |
-| Bebauungsplan/-pläne                  | [Anzahl] <!-- TODO: Wert eintragen -->  |
-| Neubaugebiete                         | [Anzahl] <!-- TODO: Wert eintragen -->  |
-| Gestaltungssatzung                    | [ja/nein] <!-- TODO: Wert eintragen --> |
-| Landschaftsplanung                    | [ja/nein] <!-- TODO: Wert eintragen --> |
-| Lokale/regionale Entwicklungskonzepte | [ja/nein] <!-- TODO: Wert eintragen --> |
-| Inanspruchnahme von Beratung          | [ja/nein]<!-- TODO: Wert eintragen -->  |
+| Thema                                 | Angabe |
+| ------------------------------------- | ------ |
+| Bebauungsplan/-pläne                  | 7      |
+| Neubaugebiete                         | 0      |
+| Gestaltungssatzung                    | nein   |
+| Landschaftsplanung                    | nein   |
+| Lokale/regionale Entwicklungskonzepte | nein   |
+| Inanspruchnahme von Beratung          | nein   |
 
-|                      | Dorfentwicklung               | Flurbereinigung               |
-| -------------------- | ----------------------------- | ----------------------------- |
-| Beabsichtigt im Jahr | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
-| Im Programm seit     | <!-- TODO: Wert eintragen --> | <!-- TODO: Wert eintragen --> |
-| Abgeschlossen seit   | 1990                          | 1996 (1953)                   |
+|                      | Dorfentwicklung | Flurbereinigung |
+| -------------------- | --------------- | --------------- |
+| Beabsichtigt im Jahr | -               | -               |
+| Im Programm seit     | -               | -               |
+| Abgeschlossen seit   | 1990            | 1996 (1953)     |
 
 ## Historische Elemente
 
-- Anzahl denkmalgeschützte Elemente:
+- Anzahl denkmalgeschützte Elemente: 14
 - Dorfchronik: ja (fortlaufend seit 1900)
 
 ## Teilnahme am Wettbewerb
 
-| Kreisebene                   | Regionale Ebene | Landesebene                   |
-| ---------------------------- | --------------- | ----------------------------- |
-| 1963, 1994, 1999, 2005, 2014 | 2005, 2014      | <!-- TODO: Wert eintragen --> |
+| Kreisebene                   | Regionale Ebene | Landesebene |
+| ---------------------------- | --------------- | ----------- |
+| 1963, 1994, 1999, 2005, 2014 | 2005, 2014      | -           |
