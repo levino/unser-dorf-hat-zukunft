@@ -2,6 +2,8 @@
 sidebar_position: 5
 ---
 
+import styles from "@site/src/css/embedded-pdf.module.css";
+
 # Übersichtskarte ❌
 
 :::info
@@ -12,4 +14,6 @@ sidebar_position: 5
 
 :::
 
-<!-- TODO: Karte besorgen -->
+<div className={styles.embeddedPdf}>
+  <embed src="/karte-roessing.pdf" />
+</div>

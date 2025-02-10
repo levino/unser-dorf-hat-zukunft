@@ -6,7 +6,6 @@
     "ghcr.io/devcontainers-community/features/deno:1": {}
   },
   "postCreateCommand": "npm install",
-  "postStartCommand": "deno task start",
   "customizations": {
     "vscode": {
       "extensions": [
