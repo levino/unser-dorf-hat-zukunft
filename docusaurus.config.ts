@@ -67,7 +67,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           path: 'unterlagen',
-          routeBasePath: '/',
+          routeBasePath: '/unterlagen',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -111,7 +111,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Bewerbungsunterlagen',
+          label: 'Unterlagen',
         },
         { to: '/berichte', label: 'Berichte', position: 'left' },
         { to: '/emails', label: 'E-Mails', position: 'left' },
