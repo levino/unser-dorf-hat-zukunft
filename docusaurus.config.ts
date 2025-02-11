@@ -115,7 +115,7 @@ const config: Config = {
         },
         { to: '/berichte', label: 'Berichte', position: 'left' },
         { to: '/emails', label: 'E-Mails', position: 'left' },
-        { to: '/about', label: 'Über die Seite', position: 'left' },
+        { to: '/about', label: 'Mitmachen', position: 'left' },
         {
           href: 'https://github.com/levino/unser-dorf-hat-zukunft',
           label: 'GitHub',

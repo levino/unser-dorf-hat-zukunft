@@ -1,9 +1,10 @@
-# Über diese Seite
+# Mitmachen
 
-Auf dieser Seite sammeln wir die Angaben für unsere Bewerbung für den Regional-
-und Landeswettbewerb "Unser Dorf hat Zukunft". Die Teile die schon fertig sind,
-haben ein grünes Häkchen ✅, die Teile die noch bearbeitet werden müssen ein
-rotes Kreuz ❌.
+Alle sind herzlich eingeladen, bei der Bewerbung mitzumachen. Wir brauchen jede helfende Hand und vor allem Euer Wissen und Eure persönlichen Meinungen, damit die Bewerbung für alle in Rössing stehen kann! Wie ihr mitmachen könnt, seht ihr in den folgenden Videos.
+
+## Beiträge einreichen
+
+[![YouTube](http://i.ytimg.com/vi/mwPO8wr723Y/hqdefault.jpg)](https://www.youtube.com/watch?v=mwPO8wr723Y)
 
 ## Bearbeiten
 
