@@ -1,9 +1,8 @@
 ---
-title: Arbeitstreffen - Unser Dorf hat Zukunft
 date: 2024-11-19
 ---
 
-# Arbeitstreffen: Unser Dorf hat Zukunft
+# 1. Arbeitstreffen
 
 Heute fand ein Arbeitstreffen statt, um die Teilnahme am Wettbewerb "Unser Dorf
 hat Zukunft" vorzubereiten. Im Dorfgemeinschaftshaus (DGH) kamen 13 Teilnehmer

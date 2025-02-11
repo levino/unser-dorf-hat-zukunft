@@ -8,7 +8,7 @@ authors:
 Wir haben uns erneut getroffen. Udo und Levin haben über den aktuellen Planungsstand berichtet. Dabei wurde
 der Plan präzisiert und neue Aufgaben verteilt.
 
-<!-- truncate --->
+<!-- truncate -->
 
 ## Einhaltung der Struktur
 
