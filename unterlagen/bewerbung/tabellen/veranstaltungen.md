@@ -1,5 +1,5 @@
 ---
-sidebar_label: Veranstaltungen ❌
+sidebar_label: Veranstaltungen
 ---
 
 # Veranstaltungen im Dorf
@@ -8,7 +8,7 @@ sidebar_label: Veranstaltungen ❌
 
 3.1.4 c) der [Teilnahmebedingungen](/teilnahmebedingungen.pdf):
 
-> Veranstaltungen im Dorf,
+> Wiederkehrende Termine und Aktionen im Dorf nach Ziff. 3.1.4 c),
 
 :::
 
@@ -23,3 +23,10 @@ sidebar_label: Veranstaltungen ❌
 - \3. Oktober - Tag der Deutschen Einheit mit Sektempfang am Dorfgemeinschafshaus mit Konzert des Musikzugs der Freiwilligen Feuerwehr (Ortsrat)
 - Oktober - Bosselturnier mit Grillabend (CDU)
 - Kinderfasching, Kinderweihnachtsfeier und Ostereiersuche (VSV)
+
+:::tip[Aufruf]
+Wenn wir etwas vergessen habe, schreib uns bitte einen Beitrag!
+
+<a class="button button--primary" href="mailto:udhz-roessing@fire.fundersclub.com
+?cc=druno@noack-consultants.eu,post@levinkeller.de&subject=UDhZ - Mein Beitrag zum Punkt Veranstaltungen der Tabellen&body=Liebes UDhZ-Team,%0D%0Ahier ist ein Beitrag von mir zum Punkt Veranstaltungen der Tabellen:%0D%0A">Beitrag einreichen</a>
+:::

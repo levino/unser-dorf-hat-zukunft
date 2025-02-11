@@ -1,10 +1,14 @@
 ---
-sidebar_position: 0.5
+sidebar_position: 1
 ---
 
 # Leitfaden
 
 zum Landeswettbewerb Unser Dorf hat Zukunft in Niedersachsen
+
+:::info[Hinweis]
+Dies ist der offizielle Leitfaden zum Landeswettbewerb Unser Dorf hat Zukunft in Niedersachsen. Zur besseren Lesbarkeit haben wir ihn in Markdown konvertiert.
+:::
 
 ## Unser Dorf hat Zukunft
 
